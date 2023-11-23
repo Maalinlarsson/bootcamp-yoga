@@ -1,0 +1,21 @@
+class-types:
+  - image: /images/jempinis-1213.jpg
+    heading: Chakra flow
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    button-url:
+    button-text: Sign up
+  - image: /images/jempinis-1213.jpg
+    heading: Mandala yoga
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    button-url:
+    button-text: Sign up
+  - image: /images/jempinis-1214.jpg
+    heading: Bikram hot yoga
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    button-url:
+    button-text: Sign up
+  - image: /images/jempinis-1212.jpg
+    heading: Vinyasa flow
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    button-url:
+    button-text: Sign up

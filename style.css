@@ -23,4 +23,27 @@ html {
   .fancy-image-parent > div {
     @apply relative z-10
   }
-}
+
+  body #momence-embed #momence-plugin-host-schedule .EenGE {
+    @apply bg-main-color
+    }
+
+  /* Background  */
+  #momence-embed #momence-plugin-host-schedule * {
+  @apply bg-second-color text-main-color font-sans font-light rounded-none border-main-color;}
+
+  /* This is the svg in the bottom of the form  */
+  #momence-embed #momence-plugin-host-schedule svg {
+  @apply hidden
+  }
+
+  /* This is the image on the form  */
+  #momence-embed #momence-plugin-host-schedule img {
+  @apply hidden
+  }
+  
+  
+
+  }
+
+

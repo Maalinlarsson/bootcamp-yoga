@@ -22,15 +22,6 @@ classes:
   description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat.
   button-url: /classes.html
   button-text: Find out more
-small-classes:
-  - heading: Bikram yoga
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-  - heading: Mandala yoga
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-  - heading: Chakra flow
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-  - heading: Vinyasa flow
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
 testimonials:
    - image: /images/jempinis-1210.jpg
      name: Duis Aute
@@ -76,7 +67,7 @@ seo:
     </div>
     </div>
 
-    {% for item in page.small-classes %}
+    {% for item in site.data.classes.class-types %}
     <div class="p-5p bg-second-color items-end flex">
       <div>
         <h3 class=" font-small-headings text-2xl"> {{ item.heading }} </h3>

@@ -10,7 +10,7 @@ split-banner:
   button-color:
   banner-position: 50% 20%
 seo:
-  title: The Yoga Studio
+  title: The Yoga Studio classes
   description: "your description goes here"
   keywords: "your, keywords, go, here"
   social_image: "path/to/social/image.jpg"
@@ -19,3 +19,20 @@ seo:
 
 <!--------------------------- Split-header-banner --------------------------->
 {% include split-banner.html %}
+
+<!--------------------------- This is the small preview --------------------------->
+<section class="p-10p py-5p bg-second-color text-main-color">
+  <div class="max-w-screen-2xl grid grid-cols-3 gap-6">
+    {% for item in site.data.classes.class-types %}
+    <div class="border border-main-color p-4">
+      <div class="bg-cover bg-center border border-main-color" style="background-image: url('{{ item.image }}'); aspect-ratio:{{ include.aspect | default: '1' }};">
+        </div>
+
+        <div class="p-5 text-center">
+          <h4 class="capitalize mb-5 border-b border-main-color p-5 font-small-headings text-xl"> {{ item.heading }} </h4>
+          <p class="mb-5"> {{ item.description }} </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+</section>

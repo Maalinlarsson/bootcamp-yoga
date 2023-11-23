@@ -1,16 +1,16 @@
 ---
 layout: default
 split-banner:
-  banner-image: '/images/jempinis-1215.jpg'
+  banner-image: '/images/jempinis-1214.jpg'
   top-text:
   big-text: Schedule
   description:
   button-url:
   button-text:
   button-color:
-  banner-position:
+  banner-position: 50% 60%
 seo:
-  title: Travel magazine
+  title: The yoga studio schedule
   description: "your description goes here"
   keywords: "your, keywords, go, here"
   social_image: "path/to/social/image.jpg"
@@ -19,3 +19,24 @@ seo:
 
 <!--------------------------- Split-header-banner --------------------------->
 {% include split-banner.html %}
+
+<!--------------------------- Schedule for the classes --------------------------->
+<section class="bg-second-color"> 
+
+  <div id="momence-embed">
+
+        <div id="ribbon-schedule"></div>
+        <script
+          async
+          type="module"
+          host_id="32227"
+          teacher_ids="[]"
+          location_ids="[]"
+          tag_ids="[]"
+          default_filter="show-all"
+            src="https://momence.com/plugin/host-schedule/host-schedule.js"> 
+      </script>
+
+  </div>
+  
+</section>

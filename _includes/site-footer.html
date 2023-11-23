@@ -1,11 +1,11 @@
 <footer class="bg-main-color text-white">
-    <div class="grid grid-cols-5 p-5">
+    <div class="grid grid-cols-5 py-5 px-5p">
         {% for item in site.data.settings.footer %}
-        <div class="uppercase px-15p">
+        <div class="uppercase ">
             <h4 class="mb-5"> {{ item.heading }} </h4>
 
             {% for link in item.links %}
-            <a href="{{ link.url }}" class="block mb-1 py-0.1 text-sm"> {{ link.text }} </a>
+            <a href="{{ link.url }}" class="block mb-1 text-sm"> {{ link.text }} </a>
             {% endfor %}
         </div>
         {% endfor %}
@@ -17,7 +17,7 @@
         </form>
     </div>
 
-    <div class="border-t p-5">
-        <span class="uppercase ml-[2.2rem] text-xs"> Terms of use </span>
+    <div class="border-t py-5 px-5p">
+        <span class="uppercase text-xs"> Terms of use </span>
     </div>
 </footer>
