@@ -12,3 +12,15 @@
 html {
   scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
 }
+
+@layer components {
+  .fancy-image-parent {
+    @apply relative;
+  }
+  .fancy-image-parent img {
+    @apply absolute h-full w-full inset-0 object-cover
+  }
+  .fancy-image-parent > div {
+    @apply relative z-10
+  }
+}

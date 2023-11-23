@@ -8,6 +8,29 @@ hero-banner:
   button-url:
   button-text:
   button-color:
+opening-section: 
+  image: /images/jempinis-122.jpg
+  alt-text: Yoga girl
+  heading: Duis aute irure
+  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat.
+  button-url: /contact.html
+  button-text: Sign up
+classes: 
+  image: /images/jempinis-123.jpg
+  alt-text: Meditation
+  heading: Our Classes
+  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat.
+  button-url: /classes.html
+  button-text: Find out more
+small-classes:
+  - heading: Bikram yoga
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+  - heading: Mandala yoga
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+  - heading: Chakra flow
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+  - heading: Vinyasa flow
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
 seo:
   title: Travel magazine
   description: "your description goes here"
@@ -15,3 +38,45 @@ seo:
   social_image: "path/to/social/image.jpg"
   hide-from-google: false
 ---
+<!--------------------------- Header-banner --------------------------->
+<!-- This is on the default, you don't need to add it here -->
+
+<!--------------------------- Opening section --------------------------->
+<section class="grid grid-cols-2 text-main-color bg-second-color">
+  <div class="p-15p flex items-end max-w-screen-2xl min-h-screen">
+    <div>
+      <h2 class="capitalize font-poppins"> {{ page.opening-section.heading }} </h2>
+      <p> {{ page.opening-section.description }} </p>
+      <a href="{{ page.opening-section.button-url }}" class="text-white uppercase bg-main-color px-6 py-2 inline-block"> {{ page.opening-section.button-text }} </a>
+    </div>
+  </div>
+  <div class="fancy-image-parent pb-25p">
+    <img src="{{ page.opening-section.image }}" alt="{{ page.opening-section.alt-text }}">
+  </div>
+</section>
+
+<!--------------------------- Different classes section --------------------------->
+<section class="text-main-color bg-second-color">
+  <div class="max-w-screen-2xl grid grid-cols-2">
+     <!-- This is the big grid with one image -->
+      <div class="fancy-image-parent pt-25p">
+        <img src="{{ page.classes.image }}" alt="{{ page.classes.alt-text }}" class="">
+        <div class="text-white ">
+          <h2> {{page.classes.heading-image}} </h2>
+          <p> {{page.classes.description }} </p>
+          <a href="{{ classes.button-url }}" class="uppercase"> {{ page.button-text}} </a>
+        </div>
+      </div>
+   
+    <!-- This is the grid with four columns -->
+    <div class="grid grid-cols-2">
+      <div class="">
+        {% for item in page.small-classes %}
+        <div>
+          <h3> {{ item.heading }} </h3>
+          <p> {{ item.descrption }} </p>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+</section>
