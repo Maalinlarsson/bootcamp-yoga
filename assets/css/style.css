@@ -460,6 +460,9 @@ video {
 .row-span-2 {
   grid-row: span 2 / span 2;
 }
+.m-5 {
+  margin: 1.25rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -505,6 +508,9 @@ video {
 }
 .grid {
   display: grid;
+}
+.hidden {
+  display: none;
 }
 .min-h-90 {
   min-height: 90vh;
@@ -575,6 +581,9 @@ video {
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+.flex-col {
+  flex-direction: column;
+}
 .items-end {
   align-items: flex-end;
 }
@@ -624,14 +633,6 @@ video {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-.border-gray-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 .bg-second-color {
   --tw-bg-opacity: 1;
@@ -798,14 +799,6 @@ video {
   --tw-text-opacity: 1;
   color: rgb(201 115 36 / var(--tw-text-opacity));
 }
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
 .text-second-color {
   --tw-text-opacity: 1;
   color: rgb(251 242 233 / var(--tw-text-opacity));
@@ -820,10 +813,97 @@ html {
   scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
 }
 
+/* This is the contact form */
 body input, body textarea {
   display: block;
   width: 100%;
   padding: 3px 1.5rem;
+}
+
+/* This is the hamburger button */
+.burger-button {
+  position:fixed;
+  top: 2vh;
+  right: 2vh;
+  z-index: 9;
+  padding: 8px;
+}
+/*this is where you can change the color of the buttons*/
+.burger-button span{
+  width: 40px;
+  border: 2px solid #C97324;
+  background-color: #C97324;
+  display: block;
+  border-radius: 22px;
+  transition: 2s;
+}
+.burger-button.active span{
+  border-color: #FBF2E9;
+  background-color: #FBF2E9;
+}
+
+.burger-top, .burger-bottom{
+  position: absolute;
+}
+
+.burger-top{
+  top: -02px;
+}
+
+.burger-bottom{
+  bottom: -02px;
+}
+/* make sure this has the same top as the burger button has padding*/
+.burger-button.active .burger-top{
+  position: absolute;
+  top: 8px;
+  transform: rotateZ(45deg);
+}
+
+.burger-button.active .burger-middle{
+/*   transform: rotateZ(270deg); */
+  border-color: rgba(0,0,0,0);
+  background-color:rgba(0,0,0,0);
+}
+
+/* make sure this has the same bottom as the burger button has padding*/
+
+.burger-button.active .burger-bottom{
+  position: absolute;
+  bottom: 8px;
+  transform: rotateZ(-45deg);
+}
+
+.burger-menu {
+  background-color: rgb(201 115 36 / .7);
+    display: flex;
+    position: fixed;
+    top: 0vh;
+    left:100vw;
+    right: -100vw;
+    bottom: 0vh;  
+    padding:5px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 8;
+    transition:1s;
+    align-content:space-around;
+    justify-content:space-around;
+    flex-direction:column;
+}
+.burger-menu.active{
+  left:50vw;
+  right:0;
+}
+.burger-menu a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  color: #FBF2E9;
+  font-family: 'Oranienbaum', serif;
+  display:block;
+  padding:5px;
+  text-align:center;
+  white-space:nowrap;
 }
 
   /*----------------- This is the schedule form -----------------*/
@@ -898,19 +978,9 @@ body input, body textarea {
   font-family: oranienbaum, serif;
 }
   
-  .hover\:border-second-color:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(251 242 233 / var(--tw-border-opacity));
-}
-  
   .hover\:border-main-color:hover {
   --tw-border-opacity: 1;
   border-color: rgb(201 115 36 / var(--tw-border-opacity));
-}
-  
-  .hover\:bg-black:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
   
   .hover\:bg-second-color:hover {
@@ -918,19 +988,9 @@ body input, body textarea {
   background-color: rgb(251 242 233 / var(--tw-bg-opacity));
 }
   
-  .hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-  
   .hover\:text-main-color:hover {
   --tw-text-opacity: 1;
   color: rgb(201 115 36 / var(--tw-text-opacity));
-}
-  
-  .focus\:border-black:focus {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
   
   .focus\:border-main-color:focus {
@@ -991,16 +1051,6 @@ body input, body textarea {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
   
-  .peer:focus ~ .peer-focus\:text-main-color {
-  --tw-text-opacity: 1;
-  color: rgb(201 115 36 / var(--tw-text-opacity));
-}
-  
-  .peer:focus ~ .peer-focus\:text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-  
   .peer:focus ~ .peer-focus\:text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1016,6 +1066,12 @@ body input, body textarea {
 }
   
   @media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+  .md\:hidden {
+    display: none;
+  }
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

@@ -1,11 +1,34 @@
 <!--------------------------- This is the header banner that goes on all pages with a big image --------------------------->
 <header class="absolute z-10 inset-x-0 px-5 font-serif text-main-color">
+   
     <div  class="flex justify-between max-w-screen-2xl mx-auto p-5 relative text-xl">
         <a href="/index.html"> The Yoga Studio </a>
-        <nav class="flex gap-4 uppercase">
+
+         <!-- Regular nav -->
+        <nav class="md:flex hidden gap-4 uppercase">
+            <a href="/index.html"> Home </a>
             <a href="/classes.html"> Our Classes </a>
             <a href="/schedule.html"> Schedule </a>
             <a href="/contact.html"> Contact </a>
         </nav>
+    
+
+        <!-- This is the hamburger nav -->
+        <div class="md:hidden ">
+
+            <!-- This is the hamburger icon -->
+            <div class="burger-button">
+                <span class="burger-top"></span>
+                <span class="burger-middle"></span>
+                <span class="burger-bottom"></span>
+            </div>
+
+            <nav class="flex flex-col burger-menu">
+                <a href="/index.html" class="m-5"> Home </a>
+                <a href="/classes.html" class="m-5"> Our Classes </a>
+                <a href="/schedule.html" class="m-5"> Schedule </a>
+                <a href="/contact.html" class="m-5"> Contact </a>
+            </nav>
+        </div>
     </div>
 </header>
