@@ -448,6 +448,9 @@ video {
 .row-span-2 {
   grid-row: span 2 / span 2;
 }
+.m-3 {
+  margin: 0.75rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -472,6 +475,9 @@ video {
 }
 .ml-auto {
   margin-left: auto;
+}
+.ml-0 {
+  margin-left: 0px;
 }
 .block {
   display: block;
@@ -549,17 +555,26 @@ video {
 .gap-6 {
   gap: 1.5rem;
 }
+.gap-10 {
+  gap: 2.5rem;
+}
 .gap-\[1px\] {
   gap: 1px;
 }
 .border {
   border-width: 1px;
 }
+.border-2 {
+  border-width: 2px;
+}
 .border-t {
   border-top-width: 1px;
 }
 .border-b {
   border-bottom-width: 1px;
+}
+.border-t-2 {
+  border-top-width: 2px;
 }
 .border-main-color {
   --tw-border-opacity: 1;
@@ -571,6 +586,10 @@ video {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .bg-second-color {
   --tw-bg-opacity: 1;
@@ -584,6 +603,13 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-\[url\(\'\/images\/moody-13\.jpg\'\)\] {
+  background-image: url('/images/moody-13.jpg');
+}
 .bg-cover {
   background-size: cover;
 }
@@ -596,14 +622,14 @@ video {
 .p-10p {
   padding: 10%;
 }
+.p-5p {
+  padding: 5%;
+}
 .p-\[1px\] {
   padding: 1px;
 }
 .p-15p {
   padding: 15%;
-}
-.p-5p {
-  padding: 5%;
 }
 .px-5 {
   padding-left: 1.25rem;
@@ -643,6 +669,12 @@ video {
 }
 .pb-6 {
   padding-bottom: 1.5rem;
+}
+.pb-10p {
+  padding-bottom: 10%;
+}
+.pb-100p {
+  padding-bottom: 100%;
 }
 .pb-5 {
   padding-bottom: 1.25rem;
@@ -687,6 +719,10 @@ video {
   font-size: 1.25rem;
   line-height: 1.2;
 }
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 1;
+}
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -695,18 +731,14 @@ video {
   font-size: 1.5rem;
   line-height: 1.2;
 }
-.text-lg {
-  font-size: 1.125rem;;
-  line-height: 1.2;
+.font-bold {
+  font-weight: 700;
 }
 .uppercase {
   text-transform: uppercase;
 }
 .capitalize {
   text-transform: capitalize;
-}
-.-tracking-widest {
-  letter-spacing: -0.1em;
 }
 .tracking-widest {
   letter-spacing: 0.1em;
@@ -724,6 +756,12 @@ video {
 
 html {
   scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
+}
+
+body input, body textarea {
+  display: block;
+  width: 100%;
+  padding: 3px 1.5rem;
 }
 
   /*----------------- This is the schedule form -----------------*/
@@ -796,6 +834,26 @@ html {
   
   #momence-embed #momence-plugin-host-schedule .kKtlJb {
   font-family: oranienbaum, serif;
+}
+  
+  @media (min-width: 640px) {
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 1;
+  }
+}
+  
+  @media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .md\:gap-5 {
+    gap: 1.25rem;
+  }
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
 
 
