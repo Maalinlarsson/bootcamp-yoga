@@ -504,6 +504,9 @@ video {
 .w-2\/3 {
   width: 66.666667%;
 }
+.w-1\/4 {
+  width: 25%;
+}
 .max-w-\[300px\] {
   max-width: 300px;
 }
@@ -692,6 +695,10 @@ video {
   font-size: 1.5rem;
   line-height: 1.2;
 }
+.text-lg {
+  font-size: 1.125rem;;
+  line-height: 1.2;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -718,16 +725,8 @@ video {
 html {
   scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
 }
-  /*  */
-  body #momence-embed #momence-plugin-host-schedule .EenGE {
-  --tw-bg-opacity: 1;
-  background-color: rgb(201 115 36 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
 
-  /* */
-  
+  /*----------------- This is the schedule form -----------------*/
   /* Background  */
   #momence-embed #momence-plugin-host-schedule * {
   border-radius: 0px;
@@ -746,13 +745,57 @@ html {
   display: none;
 }
 
-  /* This is the image on the form  */
-  #momence-embed #momence-plugin-host-schedule img {
+  /* This is the image in the form */
+ #momence-embed #momence-plugin-host-schedule .jQbyba {
   display: none;
 }
   
-  
+  /* This is the button 'book now' */
+  #momence-embed #momence-plugin-host-schedule .EenGE {
+  --tw-bg-opacity: 1;
+  background-color: rgb(201 115 36 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(251 242 233 / var(--tw-text-opacity));
+}
+  #momence-embed #momence-plugin-host-schedule .EenGE:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(201 115 36 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 242 233 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(201 115 36 / var(--tw-text-opacity));
+}
 
+  /* This is the 'classes' above the form */
+  body #momence-embed #momence-plugin-host-schedule .henUQy {
+  margin-bottom: 1.25rem;
+  font-family: oranienbaum, serif;
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+  /* This is the instructor text under the title text */
+  body #momence-plugin-host-schedule .eyVeLy:not(:first-child) {
+  display: none;
+}
   
+  /* This is a small text saying 'class' above all the classes */
+  body #momence-plugin-host-schedule .igpvGC {
+  display: none;
+}
+
+  /* This is the little description under each class */
+  body #momence-plugin-host-schedule .kJTgQj {
+  display: none;
+}
+
+  /* This is text above the form */
+  #momence-embed #momence-plugin-host-schedule .kSZlqf {
+  display: none;
+}
+  
+  #momence-embed #momence-plugin-host-schedule .kKtlJb {
+  font-family: oranienbaum, serif;
+}
 
 

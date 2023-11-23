@@ -25,30 +25,55 @@ html {
   }
 
 }
-  /*  */
-  body #momence-embed #momence-plugin-host-schedule .EenGE {
-  @apply bg-main-color text-white
-  }
 
-  /* */
-  
+  /*----------------- This is the schedule form -----------------*/
   /* Background  */
   #momence-embed #momence-plugin-host-schedule * {
-  @apply bg-second-color text-main-color font-sans font-light rounded-none border-main-color
- }
+    @apply bg-second-color text-main-color font-sans font-light rounded-none border-main-color
+  }
 
   /* This is the svg in the bottom of the form  */
   #momence-embed #momence-plugin-host-schedule svg {
   @apply hidden
   }
 
-  /* This is the image on the form  */
-  #momence-embed #momence-plugin-host-schedule img {
+  /* This is the image in the form */
+ #momence-embed #momence-plugin-host-schedule .jQbyba {
   @apply hidden
+ }
+  
+  /* This is the button 'book now' */
+  #momence-embed #momence-plugin-host-schedule .EenGE  {
+    @apply bg-main-color text-second-color hover:text-main-color hover:bg-second-color hover:border-main-color
+  }
+
+  /* This is the 'classes' above the form */
+  body #momence-embed #momence-plugin-host-schedule .henUQy {
+    @apply text-4xl font-serif mb-5
+  }
+
+  /* This is the instructor text under the title text */
+  body #momence-plugin-host-schedule .eyVeLy:not(:first-child) {
+    @apply hidden
   }
   
-  
+  /* This is a small text saying 'class' above all the classes */
+  body #momence-plugin-host-schedule .igpvGC {
+    @apply hidden
+  }
 
+  /* This is the little description under each class */
+  body #momence-plugin-host-schedule .kJTgQj {
+    @apply hidden
+  }
+
+  /* This is text above the form */
+  #momence-embed #momence-plugin-host-schedule .kSZlqf {
+    @apply hidden
+  }
   
+  #momence-embed #momence-plugin-host-schedule .kKtlJb {
+    @apply font-serif
+  }
 
 

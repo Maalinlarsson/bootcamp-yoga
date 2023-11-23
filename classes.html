@@ -21,7 +21,7 @@ seo:
 {% include split-banner.html %}
 
 <!--------------------------- This is the small preview --------------------------->
-<section class="p-10p py-5p bg-second-color text-main-color">
+<section class="p-10p py-5p bg-second-color text-main-color border-t border-main-color">
   <div class="max-w-screen-2xl grid grid-cols-3 gap-6">
     {% for item in site.data.classes.class-types %}
     <div class="border border-main-color">
@@ -29,7 +29,7 @@ seo:
         </div>
 
         <div class="py-5  text-center">
-          <h4 class="capitalize px-9 mb-5 border-b border-main-color py-5 font-small-headings text-xl"> {{ item.heading }} </h4>
+          <h4 class="capitalize px-9 mb-5 border-b border-main-color py-5 text-xl font-serif"> {{ item.heading }} </h4>
           <p class="mb-5 px-9"> {{ item.description }} </p>
         </div>
       </div>
