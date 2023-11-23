@@ -31,6 +31,16 @@ small-classes:
     description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
   - heading: Vinyasa flow
     description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+testimonials:
+   - image: /images/jempinis-1210.jpg
+     name: Duis Aute
+     description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+   - image: /images/jempinis-1211.jpg
+     name: Duis Aute
+     description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+   - image: /images/jempinis-1212.jpg
+     name: Duis Aute
+     description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 seo:
   title: Travel magazine
   description: "your description goes here"
@@ -39,44 +49,57 @@ seo:
   hide-from-google: false
 ---
 <!--------------------------- Header-banner --------------------------->
-<!-- This is on the default, you don't need to add it here -->
+{% include hero-banner.html %}
 
 <!--------------------------- Opening section --------------------------->
-<section class="grid grid-cols-2 text-main-color bg-second-color">
-  <div class="p-15p flex items-end max-w-screen-2xl min-h-screen">
+<section class="grid grid-cols-4 text-main-color bg-main-color gap-[1px] p-[1px]">
+  <div class="p-15p flex items-end max-w-screen-2xl min-h-screen col-span-2 bg-second-color">
+
+    <!-- This s the first part with one big textarea and one big image -->
     <div>
-      <h2 class="capitalize font-poppins"> {{ page.opening-section.heading }} </h2>
-      <p> {{ page.opening-section.description }} </p>
+      <h2 class="capitalize font-serif text-6xl pb-5 tracking-widest"> {{ page.opening-section.heading }} </h2>
+      <p class="pb-5"> {{ page.opening-section.description }} </p>
       <a href="{{ page.opening-section.button-url }}" class="text-white uppercase bg-main-color px-6 py-2 inline-block"> {{ page.opening-section.button-text }} </a>
     </div>
   </div>
-  <div class="fancy-image-parent pb-25p">
+  <div class="fancy-image-parent pb-25p col-span-2">
     <img src="{{ page.opening-section.image }}" alt="{{ page.opening-section.alt-text }}">
   </div>
+
+  <!-- This is the second part with an big image and four small columns -->
+  <div class="fancy-image-parent bg-second-color pt-50p min-h-screen col-span-2 row-span-2">
+    <img src="{{ page.classes.image }}" alt="{{ page.classes.alt-text }}" class="">
+    <div class="text-white p-5p pb-15p">
+      <h2 class="font-serif text-6xl pb-5"> {{ page.classes.heading }} </h2>
+      <p class="pb-5 max-w-[500px]"> {{ page.classes.description }} </p>
+      <a href="{{ paage.classes.button-url }}" class="uppercase bg-main-color px-6 py-2 inline-block"> {{  page.classes.button-text }} </a>
+    </div>
+    </div>
+
+    {% for item in page.small-classes %}
+    <div class="p-5p bg-second-color items-end flex">
+      <div>
+        <h3 class=" font-small-headings text-2xl"> {{ item.heading }} </h3>
+        <p class="py-5p"> {{ item.description }} </p>
+      </div>
+    </div>
+    {% endfor %}
 </section>
 
-<!--------------------------- Different classes section --------------------------->
-<section class="text-main-color bg-second-color">
-  <div class="max-w-screen-2xl grid grid-cols-2">
-     <!-- This is the big grid with one image -->
-      <div class="fancy-image-parent pt-25p">
-        <img src="{{ page.classes.image }}" alt="{{ page.classes.alt-text }}" class="">
-        <div class="text-white ">
-          <h2> {{page.classes.heading-image}} </h2>
-          <p> {{page.classes.description }} </p>
-          <a href="{{ classes.button-url }}" class="uppercase"> {{ page.button-text}} </a>
+<!--------------------------- Testimonials section --------------------------->
+<section class="p-10p py-5p bg-second-color text-main-color">
+  <h2 class="font-serif text-6xl p-5 pl-0"> Testimonials </h2>
+  <div class="max-w-screen-2xl grid grid-cols-3 gap-4">
+    {% for item in page.testimonials limit:3 %}
+    <div>
+      <div class="bg-cover bg-center border border-main-color" style="background-image: url('{{ item.image }}'); aspect-ratio:{{ include.aspect | default: '1' }};">
+        </div>
+
+        <div class="p-5 text-center">
+          <h4 class="capitalize mb-5 border-b border-main-color p-5 font-small-headings"> {{ item.name }} </h4>
+          <p class="mb-5"> {{ item.description }} </p>
         </div>
       </div>
-   
-    <!-- This is the grid with four columns -->
-    <div class="grid grid-cols-2">
-      <div class="">
-        {% for item in page.small-classes %}
-        <div>
-          <h3> {{ item.heading }} </h3>
-          <p> {{ item.descrption }} </p>
-        </div>
-        {% endfor %}
+      {% endfor %}
     </div>
-  </div>
 </section>

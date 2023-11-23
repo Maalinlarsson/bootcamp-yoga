@@ -1,0 +1,17 @@
+<!--------------------------- This is the split banner on the top of the page --------------------------->
+<section class="min-h-90 relative px-5 bg-second-color font-serif text-main-color">  
+    <div class="bg-cover bg-center absolute inset-y-0 right-0 w-2/3" style="background-image: url('{{ page.split-banner.banner-image }}'); background-position:{{ page.split-banner.banner-position }}"></div>
+
+    <div class="relative">
+        {% if page.split-banner.top-text %}
+            <span class="uppercase tracking-widest border-t border-main-color"> {{ page.split-banner.top-text }} </span>
+        {% endif %}
+
+        <h1 class="text-9xl border-t border-main-color"> {{ page.split-banner.big-text }} </h1>
+        <p class="max-w-[300px]"> {{ page.split-banner.description }} </p>
+
+        {% if page.split-banner.button-url %}
+            <a href="{{ page.split-banner.button-url }}" class="border-b border-current inline-block mt-3" style="color:{{ page.split-banner.button-color }}"> {{ page.hero-banner.button-text }} </a>
+        {% endif %}
+    </div>
+</section>  

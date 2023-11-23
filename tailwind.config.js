@@ -25,7 +25,7 @@ module.exports = {
     fontFamily: {
       'sans': ['montserrat', 'sans-serif;'],
       'serif': ['oranienbaum', 'serif'],
-      'poppins': ['poppins', 'sans-serif'],
+      'small-headings': ['poppins', 'sans-serif'],
     },
     extend: {
       colors: {

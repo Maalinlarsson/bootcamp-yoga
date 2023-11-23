@@ -1,0 +1,13 @@
+<footer class="bg-main-color border-b border-white text-white">
+    <div class="grid grid-cols-5">
+        {% for item in site.data.settings.footer %}
+        <div class="">
+            <h4> {{ item.heading }} </h4>
+
+            {% for link in item.links %}
+            <a href="{{ link.url }}"> {{ link.text }} </a>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</footer>
