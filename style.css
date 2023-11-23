@@ -15,7 +15,7 @@ html {
 
 @layer components {
   .fancy-image-parent {
-    @apply relative;
+    @apply relative
   }
   .fancy-image-parent img {
     @apply absolute h-full w-full inset-0 object-cover
@@ -24,13 +24,18 @@ html {
     @apply relative z-10
   }
 
+}
+  /*  */
   body #momence-embed #momence-plugin-host-schedule .EenGE {
-    @apply bg-main-color
-    }
+  @apply bg-main-color text-white
+  }
 
+  /* */
+  
   /* Background  */
   #momence-embed #momence-plugin-host-schedule * {
-  @apply bg-second-color text-main-color font-sans font-light rounded-none border-main-color;}
+  @apply bg-second-color text-main-color font-sans font-light rounded-none border-main-color
+ }
 
   /* This is the svg in the bottom of the form  */
   #momence-embed #momence-plugin-host-schedule svg {
@@ -44,6 +49,6 @@ html {
   
   
 
-  }
+  
 
 
