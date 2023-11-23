@@ -23,13 +23,15 @@ module.exports = {
       '9xl': ['8rem', '1'],
     },
     fontFamily: {
-      'sans': ['proxima-nova', 'ui-sans-serif'],
-      'sans-tight': ['proxima-nova-condensed', 'ui-sans-serif'],
-      'mono': ['Inconsolata', 'ui-mono', 'monospace'],
-      'soft': ['proxima-soft', 'ui-sans-serif'],
-      'soft-tight': ['proxima-soft-condensed', 'ui-sans-serif'],
+      'sans': ['montserrat', 'sans-serif;'],
+      'serif': ['oranienbaum', 'serif'],
+      'poppins': ['poppins', 'sans-serif'],
     },
     extend: {
+      colors: {
+        'main-color': '#C97324',
+        'second-color': '#FBF2E9',
+      },
       lineHeight: {
         'tight': '.85',
         'snug': '.95',
@@ -39,6 +41,10 @@ module.exports = {
         '5p': '5%',
         '10p': '10%',
         '15p': '15%',
+        '50p': '50%',
+        '75p': '75%',
+        '100p': '100%',
+        '120p': '120%',
       },
       minHeight:{
         '100': '100vh',

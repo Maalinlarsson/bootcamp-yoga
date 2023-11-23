@@ -1,0 +1,24 @@
+<!--------------------------- This is the header banner that goes on all pages --------------------------->
+<header class="min-h-90 bg-cover bg-center px-5 text-white bg-second-color font-serif text-main-color" style="background-image: url('{{ page.hero-banner.banner-image }}'); background-position:{{ page.hero-banner.banner-position }}">
+    <div  class="flex justify-between max-w-screen-2xl mx-auto p-5 relative">
+        <a href="/index.html"> The Yoga Studio </a>
+        <nav class="flex gap-4 uppercase">
+            <a href="/classes.html"> Our Classes </a>
+            <a href="/schedule.html"> Schedule </a>
+            <a href="/contact.html"> Contact </a>
+        </nav>
+    </div>
+
+    {% if page.banner.top-text %}
+    <span class="uppercase"> {{ page.hero-banner.top-text }} </span>
+    {% endif %}
+
+    <h1 class="text-9xl"> {{ page.hero-banner.big-text }} </h1>
+    <p class="max-w-[300px]"> {{ page.hero-banner.description }} </p>
+
+    {% if page.banner.button-url %}
+    <a href="{{ page.banner.button-url }}" class="border-b border-current inline-block mt-3" style="color:{{ page.hero-banner.button-color }}"> {{ page.hero-banner.button-text }} </a>
+    {% endif %}
+
+</header>
+
