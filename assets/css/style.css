@@ -1047,6 +1047,11 @@ body input, body textarea {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
   
+  .peer:focus ~ .peer-focus\:text-main-color {
+  --tw-text-opacity: 1;
+  color: rgb(201 115 36 / var(--tw-text-opacity));
+}
+  
   [dir="rtl"] .peer:focus ~ .rtl\:peer-focus\:left-auto {
   left: auto;
 }
@@ -1070,6 +1075,9 @@ body input, body textarea {
 }
   
   @media (min-width: 768px) {
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
   .md\:block {
     display: block;
   }
@@ -1099,6 +1107,12 @@ body input, body textarea {
   }
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   .md\:items-end {
     align-items: flex-end;
