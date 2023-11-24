@@ -28,6 +28,7 @@ body input, body textarea {
   z-index: 9;
   padding: 8px;
 }
+
 /*this is where you can change the color of the buttons*/
 .burger-button span{
   width: 40px;
@@ -37,6 +38,7 @@ body input, body textarea {
   border-radius: 22px;
   transition: 2s;
 }
+
 .burger-button.active span{
   border-color: #FBF2E9;
   background-color: #FBF2E9;
@@ -53,6 +55,7 @@ body input, body textarea {
 .burger-bottom{
   bottom: -02px;
 }
+
 /* make sure this has the same top as the burger button has padding*/
 .burger-button.active .burger-top{
   position: absolute;
@@ -67,7 +70,6 @@ body input, body textarea {
 }
 
 /* make sure this has the same bottom as the burger button has padding*/
-
 .burger-button.active .burger-bottom{
   position: absolute;
   bottom: 8px;
@@ -89,13 +91,15 @@ body input, body textarea {
     align-content:space-around;
     flex-direction:column;
 }
+
 .burger-menu.active{
   left:50vw;
   right:0;
 }
+
 .burger-menu a {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #FBF2E9;
   font-family: 'Oranienbaum', serif;
   display:block;
@@ -104,6 +108,9 @@ body input, body textarea {
   white-space:nowrap;
 }
 
+.burger-menu a:hover{
+  color:#e9b785;
+}
 
 @layer components {
   .fancy-image-parent {

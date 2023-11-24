@@ -509,14 +509,11 @@ video {
 .hidden {
   display: none;
 }
-.min-h-90 {
-  min-height: 90vh;
+.min-h-60 {
+  min-height: 60vh;
 }
 .min-h-screen {
   min-height: 100vh;
-}
-.min-h-60 {
-  min-height: 60vh;
 }
 .w-full {
   width: 100%;
@@ -542,15 +539,6 @@ video {
 }
 .max-w-screen-2xl {
   max-width: 1536px;
-}
-.max-w-\[500px\] {
-  max-width: 500px;
-}
-.max-w-md {
-  max-width: 28rem;
-}
-.max-w-\[200px\] {
-  max-width: 200px;
 }
 .max-w-\[250px\] {
   max-width: 250px;
@@ -584,20 +572,11 @@ video {
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
-}
-.items-start {
-  align-items: flex-start;
 }
 .items-end {
   align-items: flex-end;
@@ -605,14 +584,8 @@ video {
 .items-center {
   align-items: center;
 }
-.justify-center {
-  justify-content: center;
-}
 .justify-between {
   justify-content: space-between;
-}
-.justify-evenly {
-  justify-content: space-evenly;
 }
 .gap-4 {
   gap: 1rem;
@@ -694,12 +667,6 @@ video {
 .p-5p {
   padding: 5%;
 }
-.p-\[0px\] {
-  padding: 0px;
-}
-.p-0 {
-  padding: 0px;
-}
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -760,17 +727,11 @@ video {
 .pb-25p {
   padding-bottom: 25%;
 }
-.pt-50p {
-  padding-top: 50%;
-}
 .pb-15p {
   padding-bottom: 15%;
 }
 .pl-0 {
   padding-left: 0px;
-}
-.pb-1 {
-  padding-bottom: 0.25rem;
 }
 .text-center {
   text-align: center;
@@ -784,8 +745,8 @@ video {
 .font-small-headings {
   font-family: poppins, sans-serif;
 }
-.text-9xl {
-  font-size: 8rem;
+.text-3xl {
+  font-size: 1.875rem;
   line-height: 1;
 }
 .text-sm {
@@ -800,25 +761,13 @@ video {
   font-size: 1.25rem;
   line-height: 1.2;
 }
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 1;
-}
-.text-6xl {
-  font-size: 3.75rem;
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 .text-2xl {
   font-size: 1.5rem;
   line-height: 1.2;
-}
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 1;
-}
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 .uppercase {
   text-transform: uppercase;
@@ -840,12 +789,6 @@ video {
 .text-second-color {
   --tw-text-opacity: 1;
   color: rgb(251 242 233 / var(--tw-text-opacity));
-}
-.opacity-60 {
-  opacity: 0.6;
-}
-.opacity-20 {
-  opacity: 0.2;
 }
 .opacity-70 {
   opacity: 0.7;
@@ -875,6 +818,7 @@ body input, body textarea {
   z-index: 9;
   padding: 8px;
 }
+
 /*this is where you can change the color of the buttons*/
 .burger-button span{
   width: 40px;
@@ -884,6 +828,7 @@ body input, body textarea {
   border-radius: 22px;
   transition: 2s;
 }
+
 .burger-button.active span{
   border-color: #FBF2E9;
   background-color: #FBF2E9;
@@ -900,6 +845,7 @@ body input, body textarea {
 .burger-bottom{
   bottom: -02px;
 }
+
 /* make sure this has the same top as the burger button has padding*/
 .burger-button.active .burger-top{
   position: absolute;
@@ -914,7 +860,6 @@ body input, body textarea {
 }
 
 /* make sure this has the same bottom as the burger button has padding*/
-
 .burger-button.active .burger-bottom{
   position: absolute;
   bottom: 8px;
@@ -936,19 +881,25 @@ body input, body textarea {
     align-content:space-around;
     flex-direction:column;
 }
+
 .burger-menu.active{
   left:50vw;
   right:0;
 }
+
 .burger-menu a {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #FBF2E9;
   font-family: 'Oranienbaum', serif;
   display:block;
   padding:5px;
   text-align:center;
   white-space:nowrap;
+}
+
+.burger-menu a:hover{
+  color:#e9b785;
 }
 
   /*----------------- This is the schedule form -----------------*/
@@ -1091,11 +1042,6 @@ body input, body textarea {
   font-weight: 500;
 }
   
-  .peer:focus ~ .peer-focus\:text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-  
   .peer:focus ~ .peer-focus\:text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1111,9 +1057,11 @@ body input, body textarea {
 }
   
   @media (min-width: 640px) {
-  .sm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 1;
+  .sm\:max-w-md {
+    max-width: 28rem;
+  }
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .sm\:text-5xl {
     font-size: 3rem;
@@ -1122,9 +1070,6 @@ body input, body textarea {
 }
   
   @media (min-width: 768px) {
-  .md\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
   .md\:block {
     display: block;
   }
@@ -1134,23 +1079,20 @@ body input, body textarea {
   .md\:hidden {
     display: none;
   }
-  .md\:min-h-screen {
-    min-height: 100vh;
-  }
   .md\:min-h-90 {
     min-height: 90vh;
   }
-  .md\:max-w-\[500px\] {
-    max-width: 500px;
+  .md\:min-h-screen {
+    min-height: 100vh;
   }
   .md\:max-w-screen-2xl {
     max-width: 1536px;
   }
-  .md\:max-w-\[550px\] {
-    max-width: 550px;
+  .md\:max-w-\[500px\] {
+    max-width: 500px;
   }
-  .md\:max-w-\[60px\] {
-    max-width: 60px;
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1158,23 +1100,18 @@ body input, body textarea {
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
   .md\:items-end {
     align-items: flex-end;
   }
-  .md\:gap-0 {
-    gap: 0px;
+  .md\:border-b {
+    border-bottom-width: 1px;
   }
-  .md\:bg-main-color {
-    --tw-bg-opacity: 1;
-    background-color: rgb(201 115 36 / var(--tw-bg-opacity));
+  .md\:border-main-color {
+    --tw-border-opacity: 1;
+    border-color: rgb(201 115 36 / var(--tw-border-opacity));
   }
-  .md\:p-15p {
-    padding: 15%;
-  }
-  .md\:pb-5 {
+  .md\:py-5 {
+    padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
   .md\:pt-50p {
@@ -1182,6 +1119,10 @@ body input, body textarea {
   }
   .md\:text-left {
     text-align: left;
+  }
+  .md\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
   }
   .md\:text-9xl {
     font-size: 8rem;
@@ -1191,23 +1132,9 @@ body input, body textarea {
     font-size: 3.75rem;
     line-height: 1;
   }
-  .md\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
   .md\:text-second-color {
     --tw-text-opacity: 1;
     color: rgb(251 242 233 / var(--tw-text-opacity));
-  }
-  .md\:text-main-color {
-    --tw-text-opacity: 1;
-    color: rgb(201 115 36 / var(--tw-text-opacity));
-  }
-  .md\:opacity-25 {
-    opacity: 0.25;
-  }
-  .md\:opacity-0 {
-    opacity: 0;
   }
   .md\:opacity-100 {
     opacity: 1;
