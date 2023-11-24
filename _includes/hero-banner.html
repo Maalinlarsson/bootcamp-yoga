@@ -1,5 +1,5 @@
   <!--------------------------- This is the big image banner on the top of the page --------------------------->
-  <section class="min-h-90 bg-cover bg-center flex items-center px-5 text-white bg-second-color font-serif text-main-color" style="background-image: url('{{ page.hero-banner.banner-image }}'); background-position:{{ page.hero-banner.banner-position }}">  
+  <section class="min-h-60 md:min-h-90 bg-cover bg-center flex items-center px-5 bg-second-color font-serif text-main-color" style="background-image: url('{{ page.hero-banner.banner-image }}'); background-position:{{ page.hero-banner.banner-position }}">  
 
     <div class="w-full">
          <!-- This is the border on the headers -->
@@ -8,7 +8,7 @@
         <span class="uppercase tracking-widest"> {{ page.hero-banner.top-text }} </span>
         {% endif %}
 
-        <h1 class="text-9xl"> {{ page.hero-banner.big-text }} </h1>
+        <h1 class="text-3xl sm:text-5xl md:text-8xl font-serif"> {{ page.hero-banner.big-text }} </h1>
         <p class="max-w-[300px]"> {{ page.hero-banner.description }} </p>
 
         {% if page.banner.button-url %}

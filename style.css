@@ -82,12 +82,11 @@ body input, body textarea {
     left:100vw;
     right: -100vw;
     bottom: 0vh;  
-    padding:5px;
+    padding:60px;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
     z-index: 8;
     transition:1s;
     align-content:space-around;
-    justify-content:space-around;
     flex-direction:column;
 }
 .burger-menu.active{
@@ -96,8 +95,7 @@ body input, body textarea {
 }
 .burger-menu a {
   text-decoration: none;
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 2rem;
   color: #FBF2E9;
   font-family: 'Oranienbaum', serif;
   display:block;

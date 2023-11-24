@@ -33,7 +33,7 @@ testimonials:
      name: Duis Aute
      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 seo:
-  title: Travel magazine
+  title: The yoga studio 
   description: "your description goes here"
   keywords: "your, keywords, go, here"
   social_image: "path/to/social/image.jpg"
@@ -43,34 +43,34 @@ seo:
 {% include hero-banner.html %}
 
 <!--------------------------- Opening section --------------------------->
-<section class="grid grid-cols-4 text-main-color bg-main-color gap-[1px] p-[1px]">
-  <div class="p-15p flex items-end max-w-screen-2xl min-h-screen col-span-2 bg-second-color">
+<section class="grid grid-cols-2 md:grid-cols-4 text-main-color bg-main-color gap-[1px] p-[1px]">
+  <div class="p-15p flex md:items-end max-w-screen-2xl min-h-40 md:min-h-screen col-span-2 bg-second-color">
 
     <!-- This s the first part with one big textarea and one big image -->
     <div>
-      <h2 class="capitalize font-serif text-6xl pb-5 tracking-widest"> {{ page.opening-section.heading }} </h2>
+      <h2 class="capitalize font-serif text-3xl md:text-6xl pb-5 tracking-widest"> {{ page.opening-section.heading }} </h2>
       <p class="pb-5"> {{ page.opening-section.description }} </p>
       <a href="{{ page.opening-section.button-url }}" class="text-white uppercase bg-main-color px-6 py-2 inline-block"> {{ page.opening-section.button-text }} </a>
     </div>
   </div>
-  <div class="fancy-image-parent pb-25p col-span-2">
-    <img src="{{ page.opening-section.image }}" alt="{{ page.opening-section.alt-text }}">
+  <div class="fancy-image-parent pb-25p col-span-2 hidden md:block">
+    <img src="{{ page.opening-section.image }}"  class="" alt="{{ page.opening-section.alt-text }}">
   </div>
 
   <!-- This is the second part with an big image and four small columns -->
-  <div class="fancy-image-parent bg-second-color pt-50p min-h-screen col-span-2 row-span-2">
-    <img src="{{ page.classes.image }}" alt="{{ page.classes.alt-text }}" class="">
-    <div class="text-white p-5p pb-15p">
-      <h2 class="font-serif text-6xl pb-5"> {{ page.classes.heading }} </h2>
-      <p class="pb-5 max-w-[500px]"> {{ page.classes.description }} </p>
-      <a href="{{ paage.classes.button-url }}" class="uppercase bg-main-color px-6 py-2 inline-block"> {{  page.classes.button-text }} </a>
+  <div class="fancy-image-parent bg-second-color md:pt-50p min-h-screen col-span-2 row-span-2">
+    <img src="{{ page.classes.image }}" class="opacity-70 md:opacity-100" alt="{{ page.classes.alt-text }}" class="">
+    <div class="p-5p pb-15p md:text-second-color text-main-color">
+      <h2 class="font-serif text-3xl md:text-6xl pb-5"> {{ page.classes.heading }} </h2>
+      <p class="pb-5 max-w-[250px] md:max-w-[500px]"> {{ page.classes.description }} </p>
+      <a href="{{ paage.classes.button-url }}" class="uppercase bg-main-color px-6 py-2 inline-block text-second-color"> {{  page.classes.button-text }} </a>
     </div>
     </div>
 
     {% for item in site.data.classes.class-types %}
     <div class="p-5p bg-second-color items-end flex">
       <div>
-        <h3 class=" font-small-headings text-2xl"> {{ item.heading }} </h3>
+        <h3 class=" font-serif text-2xl"> {{ item.heading }} </h3>
         <p class="py-5p"> {{ item.description }} </p>
       </div>
     </div>
@@ -79,10 +79,10 @@ seo:
 
 <!--------------------------- Testimonials section --------------------------->
 <section class="p-10p py-5p bg-second-color text-main-color">
-  <h2 class="font-serif text-6xl p-5 pl-0"> Testimonials </h2>
-  <div class="max-w-screen-2xl grid grid-cols-3 gap-4">
+  <h2 class="font-serif text-3xl md:text-6xl p-5 pl-0 text-center md:text-left"> Testimonials </h2>
+  <div class="max-w-sm mx-auto md:max-w-screen-2xl grid grid-cols-1 md:grid-cols-3 gap-4">
     {% for item in page.testimonials limit:3 %}
-    <div>
+    <div class="">
       <div class="bg-cover bg-center border border-main-color" style="background-image: url('{{ item.image }}'); aspect-ratio:{{ include.aspect | default: '1' }};">
         </div>
 
